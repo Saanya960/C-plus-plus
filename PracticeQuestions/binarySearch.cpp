@@ -5,12 +5,12 @@ using namespace std;
 int searchKey( int*arr, int n, int key) {
     int st = 0;
     int end = n-1;
-    int mid = (st+ end)/2;
     while(st<=end) {
-        if(key == mid) {
+        int mid = (st+ end)/2;
+        if(key == arr[mid]) {
             return mid;
         } 
-        else if(key > mid) {
+        else if(key > arr[mid]) {
             st+=mid;
         } else {
             end-=mid;
