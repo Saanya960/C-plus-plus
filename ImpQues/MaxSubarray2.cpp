@@ -1,4 +1,4 @@
-//brute force approach
+//O(n^2) approach
 
 #include <iostream>
 #include <climits>
@@ -8,12 +8,10 @@ using namespace std;
 int maxSubarray(int* arr,int n) {
     int max_sum = INT_MIN;
     for(int i=0;i<n;i++) {
-        for(int j=i;j<n;j++) {
             int sum=0;
-            for(int k=i;k<=j;k++) {
-                sum+=arr[k];
-                max_sum = max(max_sum,sum);
-            }
+        for(int j=i;j<n;j++) {
+           sum+=arr[j];
+            max_sum = max(max_sum,sum);
         }
         cout<<endl;
     }
