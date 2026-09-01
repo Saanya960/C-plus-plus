@@ -4,12 +4,11 @@ using namespace std;
 
 
 int main() {
-    bool isIfElse = true;
-    cout<<"Do you want to check if-else conditions?-1/0"<<endl;
-    cin>>isIfElse;
+    int choice;
+    cout<<"Which approach do you want-if-else(1), switch-case(2), or ternary(3)?"<<endl;
+    cin>>choice;
 
-    if(isIfElse) {
-
+    if(choice == 1) {
     int x;
     cout<<"Enter value of x";
     cin>>x;
@@ -22,7 +21,7 @@ int main() {
         cout<<"x is zero"<<endl; }
      }
 
-    else {
+    else if(choice == 2) {
 
 //switch
 char grade = 'B';
@@ -42,6 +41,13 @@ switch(grade) {
         break;
 }
      }
+    else {
+    //ternary form of x
+    int x;
+    cout<<"Enter value of x";
+    cin>>x;
+    x>0?cout<<"x is positive"<<"\n":x<0?cout<<"x is negative"<<"\n":cout<<"x is zero"<<"\n";
+    }
     cout<<"End of program"<<"\n";
     return 0;
 
